@@ -2,5 +2,27 @@
     "statusLine": {
         "type": "command",
         "command": "~/.claude/statusline.sh"
+    },
+    "hooks": {
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/notification.sh success 'Task completed successfully'"
+                    }
+                ]
+            }
+        ],
+        "Notification": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/notification.sh warn 'Permission required'"
+                    }
+                ]
+            }
+        ]
     }
 }
